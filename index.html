@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generic Motion Sandbox</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main
+      class="demo-stage"
+      data-demo-revision="fake-ui-static-v1"
+      aria-label="Generic three-layer motion sandbox"
+    >
+      <div class="backdrop" data-layer="backdrop" aria-hidden="true">
+        <div class="backdrop-shape backdrop-shape-one"></div>
+        <div class="backdrop-shape backdrop-shape-two"></div>
+      </div>
+
+      <section class="panel" data-layer="panel" aria-hidden="true">
+        <div class="panel-header">
+          <div class="avatar"></div>
+          <div class="heading-bars">
+            <div class="heading-bar heading-bar-wide"></div>
+            <div class="heading-bar heading-bar-narrow"></div>
+          </div>
+        </div>
+        <div class="tile-grid">
+          <div class="tile tile-coral"></div>
+          <div class="tile tile-mint"></div>
+          <div class="tile tile-violet"></div>
+          <div class="tile tile-sky"></div>
+          <div class="tile tile-gold"></div>
+          <div class="tile tile-rose"></div>
+        </div>
+        <div class="panel-footer">
+          <div class="footer-line"></div>
+          <div class="footer-button"></div>
+        </div>
+      </section>
+
+      <div class="dock" data-layer="dock" aria-hidden="true">
+        <div class="dock-item"></div>
+        <div class="dock-item"></div>
+        <div class="dock-item dock-item-wide"></div>
+        <div class="dock-item"></div>
+        <div class="dock-item"></div>
+      </div>
+    </main>
+  </body>
+</html>

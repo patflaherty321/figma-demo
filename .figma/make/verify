@@ -1,0 +1,19 @@
+#!/bin/bash
+set -euo pipefail
+
+healthcheck_endpoint="http://localhost:3000/"
+max_wait=30
+elapsed=0
+
+while [ "$elapsed" -lt "$max_wait" ]; do
+  if curl -fsS "$healthcheck_endpoint" >/dev/null 2>&1; then
+    echo "Demo server is ready"
+    exit 0
+  fi
+
+  sleep 1
+  elapsed=$((elapsed + 1))
+done
+
+echo "Demo server did not start within ${max_wait}s"
+exit 1
